@@ -37,9 +37,10 @@
 #include <libscf.h>
 
 #include <libstmf.h>
-#include <libiscsit.h>
 #include <sys/iscsi_protocol.h>
 #include <sys/iscsit/isns_protocol.h>
+
+#include "libiscsit.h"
 
 /* From iscsitgtd */
 #define	TARGET_NAME_VERS	2
