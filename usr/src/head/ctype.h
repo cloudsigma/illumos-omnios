@@ -54,7 +54,8 @@ using std::isupper;
 using std::isxdigit;
 using std::tolower;
 using std::toupper;
-#if _cplusplus >= 201103L
+#if (__cplusplus >= 201103L) || defined(_STDC_C99) || defined(_XPG6) || \
+	!defined(_STRICT_SYMBOLS)
 using std::isblank;
 #endif
 #endif
@@ -94,7 +95,7 @@ extern int _toupper(int);
 
 #ifndef _LOCALE_T
 #define	_LOCALE_T
-typedef struct locale *locale_t;
+typedef struct _locale *locale_t;
 #endif
 
 extern int isalnum_l(int, locale_t);
